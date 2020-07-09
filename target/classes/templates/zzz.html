@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Book</title>
+</head>
+<body >
+EDIT USER
+
+    <label>Status:
+        <#list status as status>
+        <div>
+            <input type="checkbox" name="${status}">${status}
+        </div>
+    </#list>
+    </label
+
+Registration
+
+        <div class="form-group row">
+            <label style="color: #2C0C75" class="col-sm-1 col-form-label">Name: </label>
+            <div class="col-sm-3">
+                <input type="text" name="name"
+                       class="form-control ${(nameError??)?string('is-invalid', '')}"
+                       value="<#if passwordError??>${user.name}</#if>" placeholder="name" />
+            <#if nameError??>
+            <div class="invalid-feedback">
+                ${nameError}
+            </div>
+            </#if>
+            </div>
+        </div>
+
+ADD BOOK
+        <div class="form-group row">
+            <label style="color: #2C0C75" class="col-sm-1,75 col-form-label">Book name: </label>
+            <div class="col-sm-3">
+                <input  type="text" name="name"
+                        class="form-control ${(nameError??)?string('is-invalid', '')}"
+                        value="<#if message??>${book.name}</#if>" placeholder="name">
+                <#if nameError??>
+                <div class="invalid-feedback">
+                    ${nameError}
+                </div>
+            </#if>
+        </div>
+        </div>
+ADD CITATION - THEME
+
+<div class="form-group row">
+    <label style="color: #324304" class="col-sm-2 col-form-label">Theme: </label>
+    <div class="col-sm-3">
+        <input class="form-control" type="text" name="theme" placeholder="theme">
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Book</title>
+</head>
+<body >
+
+ADD CITATION
+
+<label class="form-check-label">Theme: </label>
+<#list status as stat>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="${stat}">${stat}
+</div>
+</#list>
+
+OR
+
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="status">
+    <label class="form-check-label">
+       DEAD
+    </label>
+</div>
+
+</body>
+</html>
